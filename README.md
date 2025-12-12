@@ -10,3 +10,16 @@ Incluye:
 - Procesamiento básico de la pregunta.
 - Respuestas simples según las consultas académicas más comunes.
 No abarca la construcción de la página web ni la gestión de bases de datos.
+
+## 3. Arquitectura General
+El sistema se compone de tres partes principales:
+
+1. **Página Web del Chatbot**  
+   Interfaz donde el usuario escribe su consulta. Esta página enviará la información hacia un Webhook.
+
+2. **n8n (Chatbot Backend)**  
+   Contiene el flujo que recibe la pregunta, la interpreta y genera una respuesta automática.  
+   El flujo inicia con un nodo Webhook que actúa como punto de entrada.
+
+3. **Respuesta al Usuario**  
+   n8n envía una respuesta en formato JSON que la página web mostrará al usuario.
