@@ -23,3 +23,11 @@ El sistema se compone de tres partes principales:
 
 3. **Respuesta al Usuario**  
    n8n envía una respuesta en formato JSON que la página web mostrará al usuario.
+
+## 4. Diseño del Flujo en n8n
+
+### 4.1 Nodo Webhook (Entrada de mensajes)
+El flujo inicia con un nodo Webhook configurado para recibir las preguntas enviadas desde la página web.  
+- Método: POST  
+- Modo de respuesta: Last Node  
+- Propósito: actuar como punto de entrada del chatbot y recibir el texto de la consulta del estudiante.
